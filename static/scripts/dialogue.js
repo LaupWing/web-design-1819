@@ -1,4 +1,4 @@
-[
+const data = [
     {
         "content": "Dit is de Jensen podcast",
         "who": "Intro",  
@@ -127,3 +127,5 @@
     }
 
 ]
+
+export default {data}

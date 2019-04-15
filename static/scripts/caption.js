@@ -1,14 +1,25 @@
+import data from './dialogue.js'
 const audio = document.querySelector('audio');
+let audioInterval;
+let time = 0;
 
-// Eerste grote nadeel van je functie's zo declareren alle functions worden niet meer gehoisd
-const checkState = function(){
-    console.log(this.paused)
-    if(!this.paused){
-        console.log('Audio is playing')
-    }else{
-        console.log('Audio is paused')  
-    }
+// ################ Event Variabels
+audio.addEventListener('play', checkState)
+audio.addEventListener('pause',checkState)
+
+function startCounter(){
+    audioInterval = setInterval(()=>{
+                            time++
+                            document.querySelector('h1').innerText = `Time: ${toSeconds(time)}`
+                        },100)
 }
-const audioIsPlaying = audio.addEventListener('play', checkState)
 
-const audioIsPaused = audio.addEventListener('pause',checkState)
+function toSeconds(value){
+    return value/10
+}
+
+function checkState(){
+    if(!this.paused)    startCounter()
+    else                clearInterval(audioInterval)
+}
+
