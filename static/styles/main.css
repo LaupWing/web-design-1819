@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: lightblue;
+}
+audio{
+    position: fixed;
+    bottom: 30px;
+    width: 300px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
