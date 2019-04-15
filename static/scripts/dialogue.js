@@ -24,10 +24,10 @@ const data = [
         "end": 15
     },
     {
-        "content": "Tot en met de nieuweburghee Europa",
+        "content": "Tot en met de nieuweburgheeee",
         "who": "Robert Jensen",
         "start": 15,
-        "end": 18
+        "end": 19
     },
     {
         "content": "Zelfs Zelfs ik weet t niet haha",
@@ -51,79 +51,85 @@ const data = [
         "content": "Ik heb er eentje opgestoken hier",
         "who": "Robert Jensen",
         "start": 27,
-        "end": 39
+        "end": 29
     },
     {
         "content": "Muziek",
         "who": "Robert Jensen",
-        "start": 39,
-        "end": 40
+        "start": 29,
+        "end": 30
     },
     {
         "content": "Het is de",
+        "who": "Robert Jensen",
+        "start": 30,
+        "end": 32
+    },
+    {
+        "content": "La Aroma",
+        "who": "Robert Jensen",
+        "start": 34,
+        "end": 35
+    },
+    {
+        "content": "Dell Cabine",
+        "who": "Robert Jensen",
+        "start": 36,
+        "end": 37
+    },
+    {
+        "content": "en micra bra",
+        "who": "Robert Jensen",
+        "start": 38,
+        "end": 39
+    },
+    {
+        "content": "Aroma dell cabine",
         "who": "Robert Jensen",
         "start": 40,
         "end": 42
     },
     {
-        "content": "La Aroma",
+        "content": "elgv",
         "who": "Robert Jensen",
         "start": 44,
-        "end": 45
+        "end": 44
     },
     {
-        "content": "Dell Cabine",
+        "content": "elgv",
+        "who": "Robert Jensen",
+        "start": 45,
+        "end": 46
+    },
+    {
+        "content": "En die sigaar korsten zijn",
         "who": "Robert Jensen",
         "start": 46,
         "end": 47
     },
     {
-        "content": "en micra bra",
-        "who": "Robert Jensen",
-        "start": 48,
-        "end": 49
-    },
-    {
-        "content": "alle del caribe elgv",
-        "who": "Robert Jensen",
-        "start": 50,
-        "end": 52
-    },
-    {
-        "content": "elgv",
-        "who": "Robert Jensen",
-        "start": 52,
-        "end": 53
-    },
-    {
-        "content": "Die die sigaar korsten zijn",
-        "who": "Robert Jensen",
-        "start": 54,
-        "end": 57
-    },
-    {
         "content": "echt ze me enorm lange dikke precies",
         "who": "Robert Jensen",
-        "start": 58,
-        "end": 61
+        "start": 48,
+        "end": 51
     },
     {
         "content": "waar ik wat ik graag in mijn mond heb en",
         "who": "Robert Jensen",
-        "start": 61,
-        "end": 63
+        "start":51,
+        "end": 53
     },
     {
         "content": "heh wat, wat zeg ik nou",
         "who": "Robert Jensen",
-        "start": 63,
-        "end": 65
+        "start": 53,
+        "end": 55
     },
     {
         "content": "WAT",
         "who": "Robert Jensen",
-        "start": 65,
-        "end": 66
+        "start": 55,
+        "end": 56
     }
 
 ]
