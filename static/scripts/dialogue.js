@@ -92,20 +92,20 @@ const data = [
     {
         "content": "elgv",
         "who": "Robert Jensen",
-        "start": 44,
+        "start": 43,
         "end": 44
     },
     {
         "content": "elgv",
         "who": "Robert Jensen",
-        "start": 45,
-        "end": 46
+        "start": 44,
+        "end": 45
     },
     {
         "content": "En die sigaar korsten zijn",
         "who": "Robert Jensen",
         "start": 46,
-        "end": 47
+        "end": 48
     },
     {
         "content": "echt ze me enorm lange dikke precies",
