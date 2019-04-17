@@ -2,6 +2,7 @@ import data from './dialogue.js'
 const audio = document.querySelector('audio');
 let audioInterval;
 let time = 0;
+let wordIndex = 0;
 
 // ################ EventListeners
 audio.addEventListener('play', checkState)
@@ -21,11 +22,10 @@ function toSeconds(value){
 
 
 
-let wordIndex = 0;
 function loadCaption(){
     data.data.forEach(item=>{
         const currentTimeInDecimal = roundDecimal(audio.currentTime)
-        
+        console.log(currentTimeInDecimal)
         if(currentTimeInDecimal > item.start && currentTimeInDecimal < item.end ){
             const duration = (item.end - item.start);
             const wordArray = item.content.split(" ")
