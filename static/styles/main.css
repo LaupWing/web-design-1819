@@ -65,3 +65,16 @@ path.outline{
     text-align: center;
     font-family: 'Concert One', cursive
 }
+
+.captions h2#current span{
+    opacity: .6;
+    font-size: 28px;
+}
+.captions h2#next span{
+    font-size: 20px;
+    opacity: .4;
+}
+.captions h2#current span.active{
+    opacity: 1;
+    font-size: 40px;
+}

@@ -7,7 +7,9 @@ let wordIndex = 0;
 // ################ EventListeners
 audio.addEventListener('play', checkState)
 audio.addEventListener('pause',checkState)
-
+window.addEventListener('load',()=>{
+    loadSpeakers()
+})
 function startCounter(){
     audioInterval = setInterval(()=>{
                             time++
@@ -20,20 +22,43 @@ function toSeconds(value){
     return value/10
 }
 
+let currentIndex = 0
 
+function loadCaption2(){
+    const currentCaption     = document.querySelector(".captions h2#current")
+    const nextCaption        = document.querySelector(".captions h2#next")
+
+    currentCaption.innerHTML = putWordInSpanEL(data.data[currentIndex].content)
+    nextCaption.innerHTML    = putWordInSpanEL(data.data[currentIndex+1].content)
+
+    
+}
+
+function putWordInSpanEL(sentence){
+    return sentence
+        .split(' ')
+        .map(word=>`<span>${word}</span>`)
+        .join(' ')
+}
+
+loadCaption2()
 
 function loadCaption(){
-    data.data.forEach(item=>{
+    const currentCaption = document.querySelector(".captions h2#current")
+    // const nextCaption = document.querySelector(".captions h2#next")
+    data.data.forEach((item,index)=>{
         const currentTimeInDecimal = roundDecimal(audio.currentTime)
-        console.log(currentTimeInDecimal)
+        // currentCaption.innerText = item.content
+        
         if(currentTimeInDecimal > item.start && currentTimeInDecimal < item.end ){
-            const duration = (item.end - item.start);
-            const wordArray = item.content.split(" ")
+            const duration        = (item.end - item.start);
+            const wordArray       = item.content.split(" ")
             const durationOneWord = duration / wordArray.length;
             const displayWordTime = (item.start+durationOneWord*(wordIndex+1))-0.13
             highlightSpeaker(item.who)
+
             if(currentTimeInDecimal >= displayWordTime){
-                document.querySelector(".captions h2").innerText += ` ${wordArray[wordIndex]} `
+                currentCaption.innerText += ` ${wordArray[wordIndex]} `
                 console.log(wordIndex, wordArray[wordIndex]);
                 wordIndex++;
                 if(wordIndex==wordArray.length){
@@ -41,7 +66,7 @@ function loadCaption(){
                     wordIndex = 0;
                     setTimeout(()=>{
                         deleteClass()
-                        document.querySelector(".captions h2").innerText = ""
+                        currentCaption.innerText = ""
                     },durationOneWord+200)
                 }
             }
@@ -50,8 +75,6 @@ function loadCaption(){
 }
 
 
-
-loadSpeakers()
 function loadSpeakers(){
     const unique = data.data
     .map(x=>x.who)
