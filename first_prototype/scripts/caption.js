@@ -31,19 +31,21 @@ function loadCaption2(){
     const currentTimeInDecimal = roundDecimal(audio.currentTime)
     const currentIteration     = data.data[currentIndex]
     const nextIteration        = data.data[currentIndex+1]
-
+    // console.log(currentCaption.querySelector('span:nth-of-type(0)'))
     currentCaption.innerHTML = putWordInSpanEL(currentIteration.content)
     nextCaption.innerHTML    = putWordInSpanEL(nextIteration.content)
     
+    // addClass(wordArray[wordIndex])
     if(currentTimeInDecimal > currentIteration.start && currentTimeInDecimal < currentIteration.end ){
         const duration        = (currentIteration.end - currentIteration.start)
         const wordArray       = Array.from(document.querySelectorAll('h2#current span'))
         const durationOneWord = duration / wordArray.length;
         const displayWordTime = (currentIteration.start+durationOneWord*(wordIndex+1))-0.13
+        
         highlightSpeaker(currentIteration.who)
         if(currentTimeInDecimal >= displayWordTime){
-            wordArray[wordIndex].classList.add('active')
-            console.log(wordArray[wordIndex])
+            // wordArray[wordIndex].classList.add('active')
+            // console.log(wordArray[wordIndex])
             wordIndex++;
             // if(wordIndex==wordArray.length){
             //     console.log('Reset wordIndex',wordIndex, wordArray.length)
@@ -57,14 +59,45 @@ function loadCaption2(){
     }
 }
 
+const currentCaption       = document.querySelector(".captions h2#current")
+const nextCaption          = document.querySelector(".captions h2#next")
+const currentIteration     = data.data[currentIndex]
+const nextIteration        = data.data[currentIndex+1]
+currentCaption.innerHTML = putWordInSpanEL(currentIteration.content)
+nextCaption.innerHTML    = putWordInSpanEL(nextIteration.content)
+
+function addClass(el){
+    el.classList.add('active')
+}
+let i=0
+setInterval(()=>{
+    const wordArray = document.querySelectorAll('h2#current span')
+    wordArray[i].classList.add('active')
+    i++
+},1000)
+
+
+// setInterval(()=>{
+
+//     setTimeout(()=>{
+//         const wordArray = Array.from(document.querySelectorAll('h2#current span'))
+//         console.log(wordArray.length)
+//         for(let i=0; i<wordArray.length; i++){
+//             console.log('test')
+//             setTimeout(()=>{
+//                 console.log(i)
+//                 wordArray[i].classList.add('active')
+//             },1000)
+//         }
+//     },2000)
+// },1000)
+
 function putWordInSpanEL(sentence){
     return sentence
         .split(' ')
         .map(word=>`<span>${word}</span>`)
         .join(' ')
 }
-
-loadCaption2()
 
 function loadCaption(){
     const currentCaption = document.querySelector(".captions h2#current")
