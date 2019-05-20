@@ -1,12 +1,51 @@
 import data from './dialogue.js'
 
+let audioInterval;
+let time = 0;
+
 window.addEventListener('load',()=>{
     addCaptions(data.data, 'content')
     loadSpeakers()
+    const playBtn = document.querySelector('svg#play-button')
+    playBtn.addEventListener('click', playPauseTrack)
 })
 
+function playPauseTrack(){
+    const playBtn = document.querySelector('svg#play-button') 
+    const paused = playBtn.querySelector('.pause').classList.contains('invisible') 
+    const audio = document.querySelector('audio')
+    playBtn.querySelector('.play').classList.toggle('invisible')
+    playBtn.querySelector('.pause').classList.toggle('invisible')
+    if(paused){
+        audio.play()
+        setIndicator(true)
+    }else{
+        audio.pause()
+        setIndicator(false)
+    }
+}
 
-console.log(data.data.length)
+function setIndicator(start){
+    if(start)   startIndicator()
+    else        clearInterval(audioInterval)
+    
+}
+
+function startIndicator(){
+    audioInterval = setInterval(()=>{
+        time++
+        indicatorLength()
+        checkSpeaker()
+    },100)
+}
+
+function indicatorLength(){
+    const timeInSeconds = time/10
+    const durationAudio = document.querySelector('audio').duration
+    const percentage  = (timeInSeconds/durationAudio)*100
+    document.querySelector('.time-indicator').style.width = `${percentage}%`
+}
+
 function addCaptions(array, prop){
     const container = document.querySelector('.captions')
     array.forEach((item,index)=>{
@@ -29,6 +68,37 @@ function putWordInSpanEL(sentence){
 }
 
 
+function checkSpeaker(){
+    const audio = document.querySelector("audio")
+    data.data.forEach((item)=>{
+        const currentTimeInDecimal = roundDecimal(audio.currentTime)
+        if(currentTimeInDecimal > item.start && currentTimeInDecimal < item.end ){
+            highlightSpeaker(item.who)
+            console.log(currentTimeInDecimal, item.end)
+            if(currentTimeInDecimal >= (item.end-0.2)){
+                deleteHighlightClass()
+                console.log('deleting')
+            }
+        }
+    })
+}
+
+function deleteHighlightClass(){
+    const allSpeakers = document.querySelectorAll('.speakers .speaker');
+    allSpeakers.forEach(speaker=>{
+        speaker.classList.remove('visible')
+    })
+}
+
+function highlightSpeaker(who){
+    const allSpeakers = document.querySelectorAll('.speakers .speaker');
+    allSpeakers.forEach(speaker=>{
+        if(speaker.querySelector('h2').innerText === who){
+            speaker.classList.add('visible')
+        }
+    })
+}
+
 function loadSpeakers(){
     const unique = data.data
     .map(x=>x.who)
@@ -45,4 +115,9 @@ function loadSpeakers(){
 }
 function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
+}
+
+// Helper functions
+function roundDecimal(value){
+    return Math.round(value*10)/10
 }

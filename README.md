@@ -14,8 +14,6 @@ In het vak Web design gaan we dingen ontwerpen voor echte mensen. Is er goede in
 - _User needs begrijpen en gebruiken in je ontwerp._
 - _Leren hoe je moet testen en de resultaten gebruiken voor het verbeteren van je ontwerp._
 
-f
-
 
 ### Week 1
 Inclusive design en ontwerpen voor 1 mens.

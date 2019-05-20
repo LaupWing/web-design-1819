@@ -44,17 +44,17 @@ function loadCaption2(){
         
         highlightSpeaker(currentIteration.who)
         if(currentTimeInDecimal >= displayWordTime){
-            // wordArray[wordIndex].classList.add('active')
-            // console.log(wordArray[wordIndex])
+            wordArray[wordIndex].classList.add('active')
+            console.log(wordArray[wordIndex])
+            deleteClass()
             wordIndex++;
-            // if(wordIndex==wordArray.length){
-            //     console.log('Reset wordIndex',wordIndex, wordArray.length)
-            //     wordIndex = 0;
-            //     setTimeout(()=>{
-            //         deleteClass()
-            //         currentCaption.innerText = ""
-            //     },durationOneWord+200)
-            // }
+            if(wordIndex==wordArray.length){
+                console.log('Reset wordIndex',wordIndex, wordArray.length)
+                wordIndex = 0;
+                setTimeout(()=>{
+                    currentCaption.innerText = ""
+                },durationOneWord+200)
+            }
         }
     }
 }
@@ -117,11 +117,11 @@ function loadCaption(){
                 currentCaption.innerText += ` ${wordArray[wordIndex]} `
                 console.log(wordIndex, wordArray[wordIndex]);
                 wordIndex++;
+                deleteClass()
                 if(wordIndex==wordArray.length){
                     console.log('Reset wordIndex',wordIndex, wordArray.length)
                     wordIndex = 0;
                     setTimeout(()=>{
-                        deleteClass()
                         currentCaption.innerText = ""
                     },durationOneWord+200)
                 }
