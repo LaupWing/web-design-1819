@@ -96,13 +96,13 @@ const data = [
         "end": 48
     },
     {
-        "content": "echt ze een enorme lange dikke precies",
+        "content": "echt zo een enorme lange dikke",
         "who": "Robert Jensen",
         "start": 48,
         "end": 51
     },
     {
-        "content": "waar ik wat ik graag in mijn mond heb en",
+        "content": "precies waar ik wat ik graag in mijn mond heb",
         "who": "Robert Jensen",
         "start":51,
         "end": 53
