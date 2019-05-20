@@ -48,16 +48,10 @@ const data = [
         "end": 29
     },
     {
-        "content": "Muziek",
-        "who": "Robert Jensen",
-        "start": 29,
-        "end": 30
-    },
-    {
         "content": "Het is de",
         "who": "Robert Jensen",
         "start": 30,
-        "end": 32
+        "end": 31.5
     },
     {
         "content": "La Aroma",
@@ -102,7 +96,7 @@ const data = [
         "end": 48
     },
     {
-        "content": "echt ze me enorm lange dikke precies",
+        "content": "echt ze een enorme lange dikke precies",
         "who": "Robert Jensen",
         "start": 48,
         "end": 51

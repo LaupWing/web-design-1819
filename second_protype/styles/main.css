@@ -91,7 +91,7 @@ svg#play-button rect{
 }
 .speaker h2{
     margin-top: 10px;
-    font-family: 'Yeseva One', cursive;
+    font-family: Arial;
 }
 .centering{
     display: flex;

@@ -402,3 +402,194 @@ h2#nr7.start span:nth-of-type(6){
         color: red;
     }
 }
+
+
+/* Nine */
+h2#nr8.start{
+    animation: fadeInOut forwards 2s;
+    animation-delay: 29.5s;
+}
+
+h2#nr8.start span:nth-of-type(1){
+    animation: h2_nr8 forwards 0.3s;
+    animation-delay: 30.3s;
+}
+h2#nr8.start span:nth-of-type(2){
+    animation: h2_nr8 forwards 0.3s;
+    animation-delay: 30.6s;
+}
+h2#nr8.start span:nth-of-type(3){
+    animation: h2_nr8 forwards 0.3s;
+    animation-delay: 30.9s;
+}
+
+@keyframes h2_nr8{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+        font-size: 40px;
+    }
+}
+
+/* Ten */
+h2#nr9.start{
+    animation: fadeInOut forwards 2s;
+    animation-delay: 34s;
+}
+
+h2#nr9.start span:nth-of-type(1){
+    animation: h2_nr9 forwards 0.4s;
+    animation-delay: 34.9s;
+}
+h2#nr9.start span:nth-of-type(2){
+    animation: h2_nr9 forwards 0.4s;
+    animation-delay: 35.3s;
+}
+
+@keyframes h2_nr9{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+        color: black;
+    }
+}
+
+/* Eleven */
+h2#nr10.start{
+    animation: fadeInOut forwards 2s;
+    animation-delay: 35.5s;
+}
+
+h2#nr10.start span:nth-of-type(1){
+    animation: h2_nr10 forwards 0.4s;
+    animation-delay: 36.4s;
+}
+h2#nr10.start span:nth-of-type(2){
+    animation: h2_nr10 forwards 0.4s;
+    animation-delay: 36.8s;
+}
+
+@keyframes h2_nr10{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+        color: black;
+    }
+}
+
+/* Twelve */
+h2#nr11.start{
+    animation: fadeInOut forwards 2s;
+    animation-delay: 37.5s;
+}
+
+h2#nr11.start span:nth-of-type(1){
+    animation: h2_nr11 forwards 0.3s;
+    animation-delay: 38.3s;
+}
+h2#nr11.start span:nth-of-type(2){
+    animation: h2_nr11 forwards 0.3s;
+    animation-delay: 38.6s;
+}
+h2#nr11.start span:nth-of-type(3){
+    animation: h2_nr11 forwards 0.3s;
+    animation-delay: 38.9s;
+}
+
+@keyframes h2_nr11{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+        color: black;
+    }
+}
+
+/* Thirteen */
+h2#nr12.start{
+    animation: fadeInOut forwards 2.5s;
+    animation-delay: 39.5s;
+}
+
+h2#nr12.start span:nth-of-type(1){
+    animation: h2_nr12 forwards 0.5s;
+    animation-delay: 40s;
+}
+h2#nr12.start span:nth-of-type(2){
+    animation: h2_nr12 forwards 0.5s;
+    animation-delay: 40.5s;
+}
+h2#nr12.start span:nth-of-type(3){
+    animation: h2_nr12 forwards 0.5s;
+    animation-delay: 41s;
+}
+
+@keyframes h2_nr12{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+        color: black;
+    }
+}
+
+/* Fourteen */
+h2#nr13.start{
+    animation: fadeInOut forwards 1.5s;
+    animation-delay: 42.5s;
+}
+
+h2#nr13.start span:nth-of-type(1){
+    animation: h2_nr13 forwards 0.5s;
+    animation-delay: 43s;
+}
+
+@keyframes h2_nr13{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+        color: black;
+    }
+}
+/* Fifteen */
+h2#nr14.start{
+    animation: fadeInOut forwards 1.5s;
+    animation-delay: 43.5s;
+}
+
+h2#nr14.start span:nth-of-type(1){
+    animation: h2_nr14 forwards 0.5s;
+    animation-delay: 44s;
+}
+
+@keyframes h2_nr14{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+        color: black;
+    }
+}
