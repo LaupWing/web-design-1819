@@ -5,6 +5,7 @@ Voor dit vak heb ik een een exclusief design website gemaakt marie van driessen.
 Link prototype: https://affectionate-minsky-ccb177.netlify.com/
 
 ![home page](./img/readme/landingpage.png)
+![caption](./img/readme/caption_started.png)
 
 De bedoeling van deze website is om een saaie caption van een podcast wat levendiger te maken. Dit word gedaan door aan de hand van de toonhoogtes en hoe mensen iets zeggen de caption zo te stylen dat de captions mee gaan met de spreker. Door het gebruik van verschillende fonts, kleuren en tekst maninupulatie's word dit effect bereikt. 
 
@@ -23,3 +24,12 @@ Gebruikte Fonts:
 ```html
 <link href="https://fonts.googleapis.com/css?family=Concert+One|Monoton|Pirata+One|Great+Vibes&display=swap" rel="stylesheet">
 ```
+
+## Feedback
+### Feedback Eerste gesprek met Marie van Driessen
+*   Laat Geluiden zien die normaal niet in een caption te zien valt(zoals achterground muziek etc.)
+*   Captions met de snelheid van de spreker mee laten gaan.
+
+### Feedback van klasgenoot: Karin
+*   Equalizer moet stoppen wanneer achtergrond muziek ook stopt
+*   Ziet er goed... maar dat is geen feedback
