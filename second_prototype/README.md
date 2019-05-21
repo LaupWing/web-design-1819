@@ -40,7 +40,14 @@ Gebruikte Fonts:
 <link href="https://fonts.googleapis.com/css?family=Concert+One|Monoton|Pirata+One|Great+Vibes&display=swap" rel="stylesheet">
 ```
 
-## Feedback
+## Feedback en iteratie
+### Test vragen
+1.  Vind je het storend dat de tekst fonts veranderen?
+2.  Vind je het storend dat de tekst kleur veranderen?
+3.  Zit de equalizer in de weg?
+4.  Leest het storend in het algemeen?
+5.  Nog enige verbeterpunten?
+
 ### Feedback Eerste gesprek met Marie van Driessen
 *   Laat Geluiden zien die normaal niet in een caption te zien valt(zoals achterground muziek etc.)
 *   Captions met de snelheid van de spreker mee laten gaan.
@@ -48,3 +55,8 @@ Gebruikte Fonts:
 ### Feedback van klasgenoot: Karin
 *   Equalizer moet stoppen wanneer achtergrond muziek ook stopt
 *   Ziet er goed... maar dat is geen feedback
+
+### Feedback van klasgenoot: Tim
+
+### Iteratie
+*   Equalizer gaat nu mee het achtergrond muziek
