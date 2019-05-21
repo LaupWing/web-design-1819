@@ -42,6 +42,7 @@ function startIndicator(){
 function indicatorLength(){
     const timeInSeconds = time/10
     const durationAudio = document.querySelector('audio').duration
+    if(timeInSeconds > 42)  document.querySelector('.everlib-logo').classList.remove('start')
     const percentage  = (timeInSeconds/durationAudio)*100
     document.querySelector('.time-indicator').style.width = `${percentage}%`
 }
@@ -59,6 +60,7 @@ document.querySelector('audio').addEventListener('play',()=>{
     document.querySelectorAll('h2').forEach(h2=>{
         h2.classList.add('start')
     })
+    document.querySelector('.everlib-logo').classList.add('start')
 })
 function putWordInSpanEL(sentence){
     return sentence

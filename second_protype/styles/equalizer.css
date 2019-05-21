@@ -14,7 +14,7 @@
     cursor: pointer;
     background: transparent;
     width: 150px;
-    height: 150px;
+    height: 50px;
     display: flex;
     justify-content: center;
 }
@@ -27,32 +27,40 @@
     width: 9px;
     margin-right: 6px;
     transition: .5s;
-    animation: equalize 4s 0s infinite;
-    animation-timing-function: linear;
+    /* animation: equalize 4s 0s infinite;
+    animation-timing-function: linear; */
     vertical-align: top;
 }
 
-.everlib-logo-first-bar {
-    height: 40px;
+.everlib-logo.start .everlib-logo-first-bar,
+.everlib-logo.start .everlib-logo-second-bar,
+.everlib-logo.start .everlib-logo-third-bar, 
+.everlib-logo.start .everlib-logo-fourth-bar {
+    animation: equalize 4s 0s infinite;
+    animation-timing-function: linear;
+}
+
+.everlib-logo.start .everlib-logo-first-bar {
+    height: 0px;
     background: #0f87ae;
     transition: 0.5s;
     animation-delay: -1.9s;
 }
 
-.everlib-logo-second-bar {
-    height: 48px;
+.everlib-logo.start .everlib-logo-second-bar {
+    height: 0px;
     background: #b75690;
     animation-delay: -2.9s;
 }
 
-.everlib-logo-third-bar {
-    height: 44px;
+.everlib-logo.start .everlib-logo-third-bar {
+    height: 0px;
     background: #86c035;
     animation-delay: -3.9s;
 }
 
-.everlib-logo-fourth-bar {
-    height: 36px;
+.everlib-logo.start .everlib-logo-fourth-bar {
+    height: 0px;
     background: #F0902E;
     animation-delay: -4.9s;
 }
