@@ -5,9 +5,24 @@ Voor dit vak heb ik een een exclusief design website gemaakt marie van driessen.
 Link prototype: https://affectionate-minsky-ccb177.netlify.com/
 
 ![home page](./img/readme/landingpage.png)
-![caption](./img/readme/caption_started.png)
 
 De bedoeling van deze website is om een saaie caption van een podcast wat levendiger te maken. Dit word gedaan door aan de hand van de toonhoogtes en hoe mensen iets zeggen de caption zo te stylen dat de captions mee gaan met de spreker. Door het gebruik van verschillende fonts, kleuren en tekst maninupulatie's word dit effect bereikt. 
+
+### Uitleg Product
+![caption](./img/readme/caption_started.png)
+#### Sprekers
+Alle sprekers in de podcast (inclusief de intro) word bovin de website weergeven. Wanneer een spreker aan het praten is dan word het icoontje van de spreker uitgelicht.
+![caption](./img/readme/sprekers.png)
+#### Caption
+Het hele zin word eerst weergeven. De captions licht op tegelijk met de spreker. Elke woord gaat mee met spreker aan de hand van hoe hard de spreker praat en hoe hij iets zegt.
+![caption](./img/readme/caption_zelf.png)
+#### Equalizer
+Door de equalizer kan je zien of er een achtergrond nummer aan het draaien is. Wanneer de equalizer weg is dan is er ook geen achtergrond muziek meer.
+![caption](./img/readme/equalizer.png)
+#### Time indicator en play/pause button
+Een indicator van hoe lang de podcast nog duurt en links heb je een play pause button.
+![caption](./img/readme/play_pause.png)
+
 
 Gebruikte Fonts:
 *   Monoton
