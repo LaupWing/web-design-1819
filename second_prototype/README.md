@@ -56,8 +56,9 @@ Gebruikte Fonts:
 *   Equalizer moet stoppen wanneer achtergrond muziek ook stopt
 
 ### Feedback van klasgenoot: Tjebbe
-*   Equalizer moet stoppen wanneer achtergrond muziek ook stopt
-*   Ziet er goed... maar dat is geen feedback
+*   Waveform toepasse op de hoogte en hardheid van hoe iemand praat
+*   User interface interessanter maken
+    *   Word wellicht teveel omdat er niet per se veel bij hoeft
 
 
 ### Iteratie
