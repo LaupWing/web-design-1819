@@ -54,9 +54,11 @@ Gebruikte Fonts:
 
 ### Feedback van klasgenoot: Karin
 *   Equalizer moet stoppen wanneer achtergrond muziek ook stopt
+
+### Feedback van klasgenoot: Tjebbe
+*   Equalizer moet stoppen wanneer achtergrond muziek ook stopt
 *   Ziet er goed... maar dat is geen feedback
 
-### Feedback van klasgenoot: Tim
 
 ### Iteratie
 *   Equalizer gaat nu mee het achtergrond muziek
