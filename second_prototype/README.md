@@ -10,11 +10,14 @@ Voor dit vak heb ik een een exclusief design website gemaakt marie van driessen.
         *   [Time indicator en play/pause button](#time-indicator-en-play/pause-button)
 *   [Feedback en Iteratie](#feedback-en-iteratie)
     *   [Feedback](#feedback)
-        *   [Feedback](#feedback)
-        *   [Feedback](#feedback)
-        *   [Feedback](#feedback)
-        *   [Feedback](#feedback)
+        *   [Feedback Eerste gesprek met Marie van Driessen](#feedback-eerste-gesprek-met-marie-van-driessen)
+        *   [Feedback van klasgenoot: Karin](#feedback-van-klasgenoot-karin)
+        *   [Feedback van klasgenoot: Tjebbe](#feedback-van-klasgenoot:-tjebbe)
+        *   [Feedback van klasgenoot: Stein](#feedback-van-klasgenoot:-stein)
     *   [Iteratie](#iteratie)
+        *   [Equalizer gaat nu mee het achtergrond muziek](#equalizer-gaat-nu-mee-het-achtergrond-muziek)
+        *   [Zie alle captions](#zie-alle-captions)
+*   [To Do List](#to-do-list)
 
 ## Caption Website
 Link prototype: https://affectionate-minsky-ccb177.netlify.com/
@@ -80,3 +83,6 @@ De equalizer stopt nu ook wanneer het achtergrond muziekje eindigt.
 ####  Zie alle captions
 Nu heeft de gebruiker de optie om all captions te bekijken die er tot het huidige playtime werd weergeven. De podcast word dan gepauzeerd zodat de gebruiker rustig kan kijken wat er allemaal gezegd werd, of de captions herlezen.  
 ![caption](./img/readme/allcaps.png)
+
+## To Do List
+- [ ] Voeg een snelheid button om de audio en de captions te vetragen/versnellen
