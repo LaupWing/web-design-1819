@@ -1,6 +1,21 @@
 # Web design case: Marie van Driessen
 Voor dit vak heb ik een een exclusief design website gemaakt marie van driessen. Marie van Driessen is doof en voor haar. Ik heb mij voornamelijk gefocussed op het ervaring van een podcast voor haar een stuk levendiger en plezieriger maken. 
 
+## Table of contents
+*   [Caption Website](#caption-website)
+    *   [Uitleg Product](#uitleg-product)
+        *   [Sprekers](#sprekers)
+        *   [Caption](#caption)
+        *   [Equalizer](#equalizer)
+        *   [Time indicator en play/pause button](#time-indicator-en-play/pause-button)
+*   [Feedback en Iteratie](#feedback-en-iteratie)
+    *   [Feedback](#feedback)
+        *   [Feedback](#feedback)
+        *   [Feedback](#feedback)
+        *   [Feedback](#feedback)
+        *   [Feedback](#feedback)
+    *   [Iteratie](#iteratie)
+
 ## Caption Website
 Link prototype: https://affectionate-minsky-ccb177.netlify.com/
 
@@ -41,25 +56,27 @@ Gebruikte Fonts:
 ```
 
 ## Feedback en iteratie
-### Test vragen
-1.  Vind je het storend dat de tekst fonts veranderen?
-2.  Vind je het storend dat de tekst kleur veranderen?
-3.  Zit de equalizer in de weg?
-4.  Leest het storend in het algemeen?
-5.  Nog enige verbeterpunten?
-
-### Feedback Eerste gesprek met Marie van Driessen
+### Feedback
+#### Feedback Eerste gesprek met Marie van Driessen
 *   Laat Geluiden zien die normaal niet in een caption te zien valt(zoals achterground muziek etc.)
 *   Captions met de snelheid van de spreker mee laten gaan.
 
-### Feedback van klasgenoot: Karin
+#### Feedback van klasgenoot: Karin
 *   Equalizer moet stoppen wanneer achtergrond muziek ook stopt
+*   Tekst gaat te snel. Wat als ik ben vergeten wat hij/zij heeft gezegd?
 
-### Feedback van klasgenoot: Tjebbe
+#### Feedback van klasgenoot: Tjebbe
 *   Waveform toepasse op de hoogte en hardheid van hoe iemand praat
 *   User interface interessanter maken
     *   Word wellicht teveel omdat er niet per se veel bij hoeft
 
+#### Feedback van klasgenoot: Stein
+*   Tekst gaat veelste snel, ik vergeet al snel wat ze hebben gezegd omdat de tekst verdwijnt.
 
 ### Iteratie
-*   Equalizer gaat nu mee het achtergrond muziek
+####  Equalizer gaat nu mee het achtergrond muziek
+De equalizer stopt nu ook wanneer het achtergrond muziekje eindigt.
+
+####  Zie alle captions
+Nu heeft de gebruiker de optie om all captions te bekijken die er tot het huidige playtime werd weergeven. De podcast word dan gepauzeerd zodat de gebruiker rustig kan kijken wat er allemaal gezegd werd, of de captions herlezen.  
+![caption](./img/readme/allcaps.png)

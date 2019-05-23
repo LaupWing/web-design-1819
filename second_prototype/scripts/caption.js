@@ -2,26 +2,68 @@ import data from './dialogue.js'
 
 let audioInterval;
 let time = 0;
-
+let allCapsOn = false
 window.addEventListener('load',()=>{
     addCaptions(data.data, 'content')
     loadSpeakers()
     const playBtn = document.querySelector('svg#play-button')
     playBtn.addEventListener('click', playPauseTrack)
+    const showAllCaptions = document.querySelector('#info button')
+    showAllCaptions.addEventListener('click', ()=>{
+        if(!allCapsOn)  {
+            allCaptions(true)
+            allCapsOn = true
+        }
+        else{
+            allCaptions(false)
+            allCapsOn = false
+        }
+    })
 })
+
+function allCaptions(show){
+    const captions = document.querySelector('.captions')
+    const allCaps = document.querySelector('.all-captions')
+    const equalizer = document.querySelector('.container')
+    if(show){
+        audioState(true)
+        captions.classList.toggle('invisible')
+        allCaps.classList.toggle('invisible')
+        equalizer.classList.toggle('invisible')
+    }else{
+        audioState(false)
+        captions.classList.toggle('invisible')
+        allCaps.classList.toggle('invisible')
+        equalizer.classList.toggle('invisible')
+    }
+}
 
 function playPauseTrack(){
     const playBtn = document.querySelector('svg#play-button') 
     const paused = playBtn.querySelector('.pause').classList.contains('invisible') 
+    if(paused)  audioState(false)
+    else        audioState(true)
+    
+}
+
+function audioState(setPause){
+    const playBtn = document.querySelector('svg#play-button') 
     const audio = document.querySelector('audio')
-    playBtn.querySelector('.play').classList.toggle('invisible')
-    playBtn.querySelector('.pause').classList.toggle('invisible')
-    if(paused){
-        audio.play()
-        setIndicator(true)
-    }else{
+    if(setPause){
         audio.pause()
         setIndicator(false)
+        playBtn.querySelector('.play').classList.remove('invisible')
+        playBtn.querySelector('.pause').classList.add('invisible')
+        document.querySelector('.everlib-logo').classList.add('anim-pause')
+        document.querySelectorAll('.captions h2').forEach(h2=>h2.classList.add('anim-pause'))
+    }else{
+        audio.play()
+        setIndicator(true)
+        playBtn.querySelector('.play').classList.add('invisible')
+        playBtn.querySelector('.pause').classList.remove('invisible')
+        document.querySelectorAll('.captions h2').forEach(h2=>h2.classList.remove('anim-pause'))
+        document.querySelector('.everlib-logo').classList.remove('anim-pause')
+
     }
 }
 
@@ -36,8 +78,26 @@ function startIndicator(){
         time++
         indicatorLength()
         checkSpeaker()
+        currentInAllCap()
     },100)
 }
+
+function currentInAllCap(){
+    const audio = document.querySelector('audio')
+    const allText = document.querySelectorAll('.all-captions h2')
+    data.data.forEach((item)=>{
+        const currentTimeInDecimal = roundDecimal(audio.currentTime)
+        if(currentTimeInDecimal > item.start && currentTimeInDecimal < item.end ){
+            allText.forEach(text=>{
+                if(text.textContent.trim() === item.content.trim()){
+                    text.classList.remove('invisible')
+                }
+            })
+        }
+    })
+}
+
+
 
 function indicatorLength(){
     const timeInSeconds = time/10
@@ -45,19 +105,27 @@ function indicatorLength(){
     if(timeInSeconds > 42)  document.querySelector('.everlib-logo').classList.remove('start')
     const percentage  = (timeInSeconds/durationAudio)*100
     document.querySelector('.time-indicator').style.width = `${percentage}%`
+    document.querySelector('#info h2').textContent = `${Math.round(timeInSeconds)} s`
 }
 
 function addCaptions(array, prop){
     const container = document.querySelector('.captions')
+    const container2 = document.querySelector('.all-captions')
     array.forEach((item,index)=>{
         const h2        = document.createElement('h2')
         h2.innerHTML = putWordInSpanEL(item[prop])
         h2.id = `nr${index}`
         container.insertAdjacentElement('beforeend', h2)
+    })   
+    array.forEach((item)=>{
+        const h2        = document.createElement('h2')
+        h2.innerHTML = putWordInSpanEL(item[prop])
+        h2.classList.add('invisible')
+        container2.insertAdjacentElement('beforeend', h2)
     })    
 }
 document.querySelector('audio').addEventListener('play',()=>{
-    document.querySelectorAll('h2').forEach(h2=>{
+    document.querySelectorAll('.captions h2').forEach(h2=>{
         h2.classList.add('start')
     })
     document.querySelector('.everlib-logo').classList.add('start')
@@ -76,10 +144,8 @@ function checkSpeaker(){
         const currentTimeInDecimal = roundDecimal(audio.currentTime)
         if(currentTimeInDecimal > item.start && currentTimeInDecimal < item.end ){
             highlightSpeaker(item.who)
-            console.log(currentTimeInDecimal, item.end)
             if(currentTimeInDecimal >= (item.end-0.2)){
                 deleteHighlightClass()
-                console.log('deleting')
             }
         }
     })
